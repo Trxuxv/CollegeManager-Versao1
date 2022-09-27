@@ -71,9 +71,9 @@
         @*ADD COURSE*@
         <div class="modal" id="AddCourse" role="dialog" style="width: 100%; padding-top: 8rem;">
             <div class="modal-dialog" style="width: 40%; margin-top: 4%;">
-                <div class="modal-content" style="background: #0d1117;">
+                <div class="modal-content" >
                     <div class="modal-header" style="border: none;">
-                        <h3 style="color: #C9D1D9;">New Course</h3>
+                        <h3>New Course</h3>
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal" name="AdicionarNovoFuncionarioForm">
@@ -96,7 +96,7 @@
                         </form>
                     </div>
                     <div class="modal-footer" style="border: none;">
-                        <button id="btnSave" type="button" class="btn btn-primary" data-dismiss="modal" ng-click="addCourse()">Confirm</button>
+                        <button id="btnSave" type="button" class="btn btn-primary bg-green-700" data-dismiss="modal" ng-click="addCourse()">Confirm</button>
                         <button id="btnSave" type="button" class="btn btn-default" data-dismiss="modal" ng-click="clearData()">Cancel</button>
                     </div>
                 </div>
@@ -108,33 +108,33 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="text-info">Update Course</h3>
+                        <h3 class="text-info text-gray-700">Update Course</h3>
                     </div>
                     <div class="modal-body" style="margin-left: 20px">
-                        <form class="form-horizontal" name="UpdateForm">
+                        <form class="form-horizontal text-gray-700" name="UpdateForm">
                             <div class="form-group">
                                 <input class="form-control" readonly="readonly" name="FuncionarioId" ng-model="UpdatedCourseId" type="hidden" placeholder="UpdatedCourseId" />
                             </div>
                             <div class="form-group">
-                                <label class="text-info"> Nome</label>
+                                <label class="text-gray-700"> Nome</label>
                                 <input class="form-control" name="Nome" ng-model="UpdatedName" type="text" placeholder="Nome" />
                             </div>
                             <div class="form-group">
-                                <label class="text-info"> Email</label>
+                                <label class="text-gray-700"> Email</label>
                                 <input class="form-control" name="Email" ng-model="UpdatedDuration" type="text" placeholder="Duration" />
                             </div>
                             <div class="form-group">
-                                <label class="text-info"> Cargo</label>
+                                <label class="text-gray-700"> Cargo</label>
                                 <input class="form-control" name="Cargo" ng-model="UpdatedCategory" type="text" placeholder="Category" />
                             </div>
                             <div class="form-group">
-                                <label class="text-info"> Departamento</label>
+                                <label class="text-gray-700"> Departamento</label>
                                 <input class="form-control" name="Departamento" ng-model="UpdatedTeacherId" type="text" placeholder="TeacherId" />
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button id="btnSave" type="button" class="btn btn-primary" id="btnUpdate" data-dismiss="modal" ng-click="updateCourse()">
+                        <button id="btnSave" type="button" class="btn btn-primary bg-yellow-600 hover:bg-yellow-900" id="btnUpdate" data-dismiss="modal" ng-click="updateCourse()">
                             Update
                         </button>
                         <button id="btnSave" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -148,7 +148,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="text-info">Você tem certeza que deseja excluir o Curso?</h3>
+                        <h3 class="text-info text-gray-500">Você tem certeza que deseja excluir o Curso?</h3>
                     </div>
                     <div class="modal-body">
                         <div>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                     <div class="modal-footer" style="border: none;">
-                        <button id="btnSave" type="button" class="btn btn-danger" data-dismiss="modal" ng-click="deleteCourse(UpdatedCourseId)">Delete</button>
+                        <button id="btnSave" type="button" class="btn btn-danger bg-red-600" data-dismiss="modal" ng-click="deleteCourse(UpdatedCourseId)">Delete</button>
                         <button id="btnSave" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -232,7 +232,6 @@
         }
 
         label {
-            color: whitesmoke !important;
             font-weight: 300;
             font-size: 0.9em !important;
             margin-left: 6.1em;
