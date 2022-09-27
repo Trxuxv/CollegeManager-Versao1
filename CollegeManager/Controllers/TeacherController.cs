@@ -2,6 +2,7 @@
 using CollegeManager.Models;
 using System.Web.Mvc;
 using System.Linq;
+using System;
 
 namespace CollegeManager.Controllers
 {
@@ -18,11 +19,18 @@ namespace CollegeManager.Controllers
 
             using ( var db = new Database())
             {
-                var listTeachers = new List<Teacher>();
+                List<TeacherModel> listTeachers ;
 
                 try
                 {   
-                    listTeachers = db.Teachers.ToList();
+                    listTeachers = db.Teachers.Select(x => new TeacherModel
+                    {
+                        Name = x.Name,
+                        Courses = x.Courses,
+                        Salary = x.Salary,
+                        TeacherId = x.TeacherId,
+                        Birthday = x.Birthday.ToString(),
+                    }).ToList();
                 }
                 catch (System.Exception e)
                 {
@@ -90,6 +98,15 @@ namespace CollegeManager.Controllers
 
                 return Json(new { success = true });
             }
+        }
+
+        class TeacherModel
+        {
+            public string Name { get; set; }
+            public ICollection<Course> Courses { get; set; }
+            public Nullable<double> Salary { get; set; }
+            public int TeacherId { get; set; }
+            public string Birthday { get; set; }
         }
     }
 }
