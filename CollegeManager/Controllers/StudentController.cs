@@ -24,7 +24,7 @@ namespace CollegeManager.Controllers
                     Name = x.Name,
                     CourseName = x.Course.Name,
                     CourseId = x.CourseId,
-                    Birthday = x.Birthday,
+                    Birthday = x.Birthday.ToString(),
                     RgNumber = x.RgNumber
                 }).ToList();
 

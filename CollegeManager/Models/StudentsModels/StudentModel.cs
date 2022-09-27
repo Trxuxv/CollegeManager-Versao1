@@ -5,7 +5,7 @@
         public int StudentId { get; set; }
         public string Name { get; set; }
         public int RgNumber { get; set; }
-        public System.DateTime Birthday { get; set; }
+        public string Birthday { get; set; }
         public int CourseId { get; set; }
         public string CourseName { get; set; }
     }
