@@ -1,0 +1,283 @@
+﻿<div id="cont-1" class="container" ng-app="students" ng-controller="studentCtrl">
+    <div id="cont-2" class="panel">
+        <div id="cont-3" class="panel-heading">Students</div>
+        <div id="cont-4" class="panel-body">
+            <button id="cont-5" type="button" class="btn btn-primary" shadow-none data-target="#AddStudent" data-toggle="modal">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+            <input id="cont-6" shadow-none ng-model="search" placeholder="Search for a student..." type="text" />
+        </div>
+
+        @*LIST*@
+        <table id="cont-7" class="table">
+            <thead id="cont-8">
+                <tr>
+                    <th class="text-center" style="border: 0.5px solid #161b22">ID</th>
+                    <th class="text-center" style="border: 0.5px solid #161b22">Name</th>
+                    <th class="text-center" style="border: 0.5px solid #161b22">Birthday</th>
+                    <th class="text-center" style="border: 0.5px solid #161b22">Registration Number</th>
+                    <th class="text-center" style="border: 0.5px solid #161b22">Course</th>
+                    <th class="text-center" style="border: 0.5px solid #161b22">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cont-9">
+                <tr ng-repeat="x in Students | filter:search">
+                    <td class="text-center" style="border-right: 0.5px solid #161b22 !important;">{{x.StudentId}}</td>
+                    <td class="text-center">{{x.Name}}</td>
+                    <td class="text-center">{{x.Birthday | date }}</td>
+                    <td class="text-center">{{x.RgNumber}}</td>
+                    <td class="text-center">{{x.CourseName}}</td>
+                    <td class="text-center" style="width: 150px; padding: 0.5%;">
+                        <a href="#" style="border-radius: 25px; padding: 0.3em 0.6em; margin-right: 0.5em;" data-target="#UpdateStudent" data-toggle="modal" class="btn btn-success" ng-click="updateStudentById(x)">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="#" style="border-radius: 25px; padding: 0.3em 0.6em; margin-right: 0.5em;" data-target="#DeleteStudent" id="btnDelete" data-toggle="modal" class="btn btn-danger" ng-click="deleteStudentById(x)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        @*ADD STUDENT*@
+        <div class="modal" id="AddStudent" role="dialog" style="width: 100%; padding-top: 12rem;">
+            <div class="modal-dialog" style="width: 40%; margin-top: 4%;">
+                <div class="modal-content" style="background: #0d1117;">
+                    <div class="modal-header" style="border: none;">
+                        <h3 style="color: #C9D1D9;">New Student</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" name="AddNewStudentForm">
+                            <div class="form-group" style="width: 100%;">
+                                <input class="form-control" readonly="readonly" name="studentId" type="hidden" placeholder="Student Id" style="margin: auto; min-width: 300px;" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="nome" ng-model="name" placeholder="Name" style="width:100%;" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="date" name="nome" ng-model="birthday" placeholder="Birthday" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="nome" ng-model="rgnumber" placeholder="Registration Number" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="nome" ng-model="courseid" placeholder="CourseID" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer" style="border: none;">
+                        <button type="button" class="btn btn-primary" shadow-none id="btnSave" data-dismiss="modal" ng-click="addStudent()">Confirm</button>
+                        <button type="button" class="btn btn-default" id="btnSave" data-dismiss="modal" ng-click="clearData()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*UPDATE STUDENT*@
+        <div class="modal" id="UpdateStudent" role="dialog" style="width: 100%; margin-top: 12rem;">
+            <div class="modal-dialog" style="width: 40%; margin-top: 4%;">
+                <div class="modal-content" style="background: #0d1117; color: whitesmoke;">
+                    <div class="modal-header" style="border: none;">
+                        <h3 style="color: #C9D1D9;">Update Student</h3>
+                    </div>
+                    <div class="modal-body" style="margin-left: 20px">
+                        <form class="form-horizontal" name="UpdateForm">
+                            <div class="form-group">
+                                <input class="form-control" readonly="readonly" name="StudentId" ng-model="UpdatedStudentId" type="hidden" placeholder="TeacherId" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="Name" ng-model="UpdatedName" type="text" placeholder="Name" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="Birthday" ng-model="UpdatedBirthday" type="date" placeholder="Birthday" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="Salary" ng-model="UpdatedRgNumber" type="text" placeholder="Registration Number" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="Salary" ng-model="UpdatedCourseId" type="text" placeholder="CourseID" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer" style="border: none;">
+                        <button type="button" id="btnSave" class="btn btn-primary" data-dismiss="modal" ng-click="updateStudent()">
+                            Update
+                        </button>
+                        <button type="button" id="btnSave" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*DELETE STUDENT*@
+        <div class="modal" role="dialog" id="DeleteStudent" style="padding-top: 13em;">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background: #0d1117;">
+                    <div class="modal-header" style="border: none; margin-top: 3em;">
+                        <h4 class="text-info" style="color: white; text-align: center;">Are you sure you want to delete this student?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div style="color: white; text-align: center;">
+                            <p>ID: {{UpdatedStudentId}}</p>
+                            <p>Student's name: {{UpdatedName}}</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="border: none;">
+                        <button type="button" id="btnSave" class="btn btn-danger" data-dismiss="modal" ng-click="deleteStudent(UpdatedStudentId)">Delete</button>
+                        <button type="button" id="btnSave" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/AngularJsApp/Student/Module.js"></script>
+    <script src="~/AngularJsApp/Student/Service.js"></script>
+    <script src="~/AngularJsApp/Student/Controller.js"></script>
+}
+
+<style>
+    #cont-1 {
+        width: 80%;
+        height: 75rem;
+        background-color: #0d1117;
+        border-radius: 10px;
+        padding: 1.3% 0.2% 0.2% 1%;
+        overflow-y: scroll;
+    }
+
+    #cont-2 {
+        background: #161b22;
+    }
+
+    #cont-3 {
+        border: none;
+        background: #161b22;
+        color: #C9D1D9;
+    }
+
+    #cont-4 {
+        background: #0d1117;
+        color: #8B949E;
+    }
+
+    #cont-5 {
+        border-radius: 25px;
+        width: 38px;
+    }
+
+        #cont-5:focus {
+            outline: none;
+        }
+
+    #cont-6 {
+        background: #0a0d12;
+        height: 30px;
+        margin-left: 10em;
+        width: 100%;
+        border: none;
+        padding: 1.5%;
+    }
+
+        #cont-6:focus {
+            outline: none;
+        }
+
+    #cont-7 {
+        background: #0d1117;
+        color: #8B949E;
+        border: 0.2px solid #161b22;
+    }
+
+    #cont-8 {
+        background-color: #161b22;
+        border: none;
+        color: white;
+    }
+
+    th {
+        color: #C9D1D9;
+        font-weight: 300;
+    }
+
+    #cont-9 {
+        color: #8B949E;
+        border: 0.2px solid #161b22;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .modal-footer {
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    input {
+        min-width: 70%;
+        margin: auto;
+        border-radius: 25px !important;
+    }
+
+    td {
+        border-bottom: 0.5px solid #161b22;
+        height: 5rem !important;
+        padding-top: 1.6em !important;
+    }
+
+    #btnSave {
+        width: 15rem;
+        border: none;
+    }
+
+        #btnSave:focus {
+            outline: none;
+        }
+
+    #add:focus {
+        outline: none;
+    }
+
+    .buttons {
+        padding: 1.2rem !important;
+    }
+
+    label {
+        color: whitesmoke !important;
+        font-weight: 300;
+        font-size: 0.9em !important;
+        margin-left: 6.1em;
+    }
+
+    select {
+        min-width: 70%;
+        margin: auto;
+        width: 100%;
+        border-radius: 25px !important;
+    }
+
+    #search:focus {
+        outline: none;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #161b22;
+        border-radius: 10px;
+    }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: green;
+        }
+</style>
