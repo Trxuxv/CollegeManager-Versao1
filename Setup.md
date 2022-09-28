@@ -43,17 +43,17 @@ First:<br/>
 <br/>
 Select SQL Server Database > Connect > ‘SQL Server Express LocalDB(Local)’ <br/>
 <br/>
-Input the ConnectionString name: ConnectionStrings<br/>
+Input the ConnectionString name: ConnectionStrings
 ![image](https://user-images.githubusercontent.com/79454375/192877427-3b1a8fbf-126c-4401-a065-e3f222344553.png)<br/>
 
 <br/>
-Now do next > finish<br/>
+Now do next > finish
 ![image](https://user-images.githubusercontent.com/79454375/192877475-2d0b4532-de19-47e4-af46-c84d75f8669f.png)<br/>
 <br/>
-It must be like this:<br/>
+It must be like this:
 ![image](https://user-images.githubusercontent.com/79454375/192877513-9ea5e580-e397-4d47-8e17-6947b6ba3bc0.png)<br/>
 <br/>
-Still in the project, delete the folder App_Data with the ‘mdf’ item<br/>
+Still in the project, delete the folder App_Data with the ‘mdf’ item
 ![image](https://user-images.githubusercontent.com/79454375/192877555-106939ab-bd49-4401-9673-f675f2027a80.png)<br/>
 
 <br/>
@@ -78,15 +78,15 @@ Select YES.<br/>
 ![image](https://user-images.githubusercontent.com/79454375/192877807-f84e17b4-5936-43c5-9109-83a9e04b97d0.png)<br/>
 <br/>
 
-You must see this:<br/>
+You must see this:
 ![image](https://user-images.githubusercontent.com/79454375/192877894-1ff62d93-b61d-4f38-afea-5ca04267e79a.png)<br/>
 <br/>
 Double click on the Database.<br/>
 <br/>
-You’ll see this:<br/>
+You’ll see this:
 ![image](https://user-images.githubusercontent.com/79454375/192877946-c9161e26-ab5e-4b40-b964-188af4688104.png)<br/>
 <br/>
-Now right-click on the Database(CollegeManager) > New Query<br/>
+Now right-click on the Database(CollegeManager) > New Query
 ![image](https://user-images.githubusercontent.com/79454375/192877992-c0ef09ef-1168-427a-ad6e-0bd9b2bcf5fc.png)<br/>
 <br/>
 
