@@ -2,7 +2,7 @@ College Manager - Configuration<br/>
 <br/>
 To run the project,  start with installing Visual Studio.<br/>
 <br/>
-When starting the IDE, you’ll be able to see a screen like this:<br/>
+When starting the IDE, you’ll be able to see a screen like this:
 ![image](https://user-images.githubusercontent.com/79454375/192875475-e1398975-26d3-44ed-9626-2a75ef75f90d.png)
 <br/>
 Select the option Clone a repository<br/>
@@ -11,7 +11,6 @@ Input the repository location: https://github.com/Trxuxv/CollegeManager.git<br/>
 <br/>
 
 Like this: 
-<br/>
 ![image](https://user-images.githubusercontent.com/79454375/192875626-fa831999-221d-44f5-8818-1382ad5150b2.png)
 <br/>
 
@@ -74,7 +73,7 @@ Rename the Database1.mdf to Database.mdf<br/>
 Now Add.<br/>
 
 <br/>
-Select YES.<br/>
+Select YES.
 ![image](https://user-images.githubusercontent.com/79454375/192877807-f84e17b4-5936-43c5-9109-83a9e04b97d0.png)<br/>
 <br/>
 
