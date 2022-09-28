@@ -30,6 +30,7 @@ namespace CollegeManager.Controllers
                 {
                     Name = x.Name,
                     StudentsInCourses = x.Students.Count(),
+                    TeachersInCourses = 2,
                     Students = students,
                     GradeAVG = grades,
                     Teachers = teachers,

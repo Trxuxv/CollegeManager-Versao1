@@ -28,13 +28,13 @@
         adicionarInfos.then(function (d) {
             if (d.data.success === true) {
                 loadCourses();
-                alert("Funcionário Adicionado com Sucesso!");
+                alert("Curso Adicionado com Sucesso!");
 
                 $scope.limparDados();
-            } else { alert("Funcionário não Adicionado!"); }
+            } else { alert("Curso não Adicionado!"); }
         },
             function () {
-                alert("Ocorreu um erro ao tentar adicionar um Novo Funcionário!");
+                alert("Ocorreu um erro ao tentar adicionar um novo Curso!");
             });
     }
 
@@ -66,15 +66,15 @@
         refreshInfos.then(function (d) {
             if (d.data.success === true) {
                 loadCourses();
-                alert("Student updated successfuly!");
+                alert("Course updated successfuly!");
                 $scope.clearUpdatedData();
             }
             else {
-                alert("Funcionário não Atualizado");
+                alert("Curso não Atualizado");
             }
         },
             function () {
-                alert("Ocorreu um erro ao tentar atualizar o Funcionário!");
+                alert("Ocorreu um erro ao tentar atualizar o Curso!");
             });
     }
 
@@ -99,10 +99,10 @@
             if (d.data.success === true) {
                 loadCourses();
 
-                alert("Funcionário excluído com Sucesso!");
+                alert("Curso excluído com Sucesso!");
             }
             else {
-                alert("Funcionário não excluído!");
+                alert("Curso não excluído!");
             }
         });
     }
