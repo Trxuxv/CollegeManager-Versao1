@@ -1,25 +1,25 @@
-College Manager - Configuration
-
-To run the project,  start with installing Visual Studio.
-
-When starting the IDE, you’ll be able to see a screen like this:
+College Manager - Configuration<br/>
+<br/>
+To run the project,  start with installing Visual Studio.<br/>
+<br/>
+When starting the IDE, you’ll be able to see a screen like this:<br/>
 ![image](https://user-images.githubusercontent.com/79454375/192875475-e1398975-26d3-44ed-9626-2a75ef75f90d.png)
-
-Select the option Clone a repository
-
-Input the repository location: https://github.com/Trxuxv/CollegeManager.git
-
+<br/>
+Select the option Clone a repository<br/>
+<br/>
+Input the repository location: https://github.com/Trxuxv/CollegeManager.git<br/>
+<br/>
 
 Like this: 
 <br/>
 ![image](https://user-images.githubusercontent.com/79454375/192875626-fa831999-221d-44f5-8818-1382ad5150b2.png)
+<br/>
 
+In the Solution, right-click on the project, select Manage NuGet Packages…<br/>
+<br/>
 
-In the Solution, right-click on the project, select Manage NuGet Packages…
-
-
-Search for: Microsoft.CodeDom.Providers.DotNetCompilerPlatform
-![image](https://user-images.githubusercontent.com/79454375/192875673-cfcad80c-d874-4ded-ba36-83d22849738e.png)
+Search for: Microsoft.CodeDom.Providers.DotNetCompilerPlatform <br/>
+![image](https://user-images.githubusercontent.com/79454375/192875673-cfcad80c-d874-4ded-ba36-83d22849738e.png) <br/>
 
 Update it.
 ![image](https://user-images.githubusercontent.com/79454375/192875727-aa119cfb-fa5b-4de3-9a3e-d3bed857eeb7.png)
