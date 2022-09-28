@@ -18,11 +18,11 @@ Like this:
 In the Solution, right-click on the project, select Manage NuGet Packages…<br/>
 <br/>
 
-Search for: Microsoft.CodeDom.Providers.DotNetCompilerPlatform <br/>
+Search for: Microsoft.CodeDom.Providers.DotNetCompilerPlatform 
 ![image](https://user-images.githubusercontent.com/79454375/192875673-cfcad80c-d874-4ded-ba36-83d22849738e.png) <br/>
 <br/>
 
-Update it.<br/>
+Update it.
 ![image](https://user-images.githubusercontent.com/79454375/192875727-aa119cfb-fa5b-4de3-9a3e-d3bed857eeb7.png)<br/>
 
 <br/>
