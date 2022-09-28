@@ -8,8 +8,10 @@ When starting the IDE, you’ll be able to see a screen like this:
 Select the option Clone a repository
 
 Input the repository location: https://github.com/Trxuxv/CollegeManager.git
-----------------------------------------------------------------------------------------------------------
+
+
 Like this: 
+<br/>
 ![image](https://user-images.githubusercontent.com/79454375/192875626-fa831999-221d-44f5-8818-1382ad5150b2.png)
 
 
